@@ -1,0 +1,6 @@
+framework module OYCategoryKit {
+  umbrella header "OYCategoryKit-umbrella.h"
+
+  export *
+  module * { export * }
+}

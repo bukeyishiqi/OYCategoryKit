@@ -1,0 +1,16 @@
+PODS:
+  - OYCategoryKit (0.1.0)
+
+DEPENDENCIES:
+  - OYCategoryKit (from `../`)
+
+EXTERNAL SOURCES:
+  OYCategoryKit:
+    :path: "../"
+
+SPEC CHECKSUMS:
+  OYCategoryKit: 11f9eb06b76340141abdd0eb8a178c29fc26ffb8
+
+PODFILE CHECKSUM: 60121870708038552a0ca8cab2b0c91eeec464b5
+
+COCOAPODS: 1.5.3

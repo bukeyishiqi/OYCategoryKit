@@ -42,9 +42,9 @@
 		607FACEB1AFB9204008FA782 /* Tests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Tests.swift; sourceTree = "<group>"; };
 		64045DA12A5928D4E27BC2DA /* Pods_OYCategoryKit_Example.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_OYCategoryKit_Example.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		69DCAB543F15A3F26B77C22B /* Pods-OYCategoryKit_Tests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-OYCategoryKit_Tests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-OYCategoryKit_Tests/Pods-OYCategoryKit_Tests.debug.xcconfig"; sourceTree = "<group>"; };
-		7DE7CDAA77CF32513B2A2742 /* README.md */ = {isa = PBXFileReference; includeInIndex = 1; name = README.md; path = ../README.md; sourceTree = "<group>"; };
-		82B554A59FC611BBDBA1B320 /* OYCategoryKit.podspec */ = {isa = PBXFileReference; includeInIndex = 1; name = OYCategoryKit.podspec; path = ../OYCategoryKit.podspec; sourceTree = "<group>"; };
-		B4779AF1CCB49AFB7BC45918 /* LICENSE */ = {isa = PBXFileReference; includeInIndex = 1; name = LICENSE; path = ../LICENSE; sourceTree = "<group>"; };
+		7DE7CDAA77CF32513B2A2742 /* README.md */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = net.daringfireball.markdown; name = README.md; path = ../README.md; sourceTree = "<group>"; };
+		82B554A59FC611BBDBA1B320 /* OYCategoryKit.podspec */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; name = OYCategoryKit.podspec; path = ../OYCategoryKit.podspec; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
+		B4779AF1CCB49AFB7BC45918 /* LICENSE */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; name = LICENSE; path = ../LICENSE; sourceTree = "<group>"; };
 		D8A1C55EF97B0CF0F9330CDC /* Pods_OYCategoryKit_Tests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_OYCategoryKit_Tests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		D91C0681611B08BF2C5ED508 /* Pods-OYCategoryKit_Tests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-OYCategoryKit_Tests.release.xcconfig"; path = "Pods/Target Support Files/Pods-OYCategoryKit_Tests/Pods-OYCategoryKit_Tests.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */

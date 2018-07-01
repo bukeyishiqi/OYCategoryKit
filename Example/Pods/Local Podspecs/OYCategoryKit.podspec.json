@@ -1,0 +1,22 @@
+{
+  "name": "OYCategoryKit",
+  "version": "0.1.0",
+  "summary": "A short description of OYCategoryKit.",
+  "description": "TODO: Add long description of the pod here.",
+  "homepage": "https://github.com/bukeyishiqi/OYCategoryKit",
+  "license": {
+    "type": "MIT",
+    "file": "LICENSE"
+  },
+  "authors": {
+    "bukeyishiqi": "chenqi_f@126.com"
+  },
+  "source": {
+    "git": "https://github.com/bukeyishiqi/OYCategoryKit.git",
+    "tag": "0.1.0"
+  },
+  "platforms": {
+    "ios": "8.0"
+  },
+  "source_files": "OYCategoryKit/Classes/**/*"
+}
