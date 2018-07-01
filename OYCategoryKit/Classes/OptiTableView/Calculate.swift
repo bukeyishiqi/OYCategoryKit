@@ -49,17 +49,17 @@ extension UITableView {
     private func templateCellForReuseIdentifier(identifier: String) -> UITableViewCell {
         assert(identifier.count>0, "需要一个正确的identifier - \(identifier)")
         
-        if tmpCellForReuseIds == nil {
-            tmpCellForReuseIds = [:]
+        if self.tmpCellForReuseIds == nil {
+            self.tmpCellForReuseIds = [:]
         }
-        var tmpCell = tmpCellForReuseIds![identifier]
+        var tmpCell = self.tmpCellForReuseIds![identifier]
         if tmpCell == nil { // 不存在则获取一个并缓存
             tmpCell = self.dequeueReusableCell(withIdentifier: identifier)
             if tmpCell == nil { // 注：防止外部没有注册Cell导致闪退问题
                 self.register(NSClassFromString(identifier), forCellReuseIdentifier: identifier)
                 tmpCell = self.dequeueReusableCell(withIdentifier: identifier)
             }
-            tmpCellForReuseIds![identifier] = tmpCell
+            self.tmpCellForReuseIds![identifier] = tmpCell
         }
         return tmpCell!
     }
@@ -142,32 +142,32 @@ extension UITableView {
 extension UITableView {
     
     private struct AssociatedKeys{
-        static var cache = "ass_cache"
-        static var cellReuseIds = "ass_cellReuseIds"
+        static let cache = UnsafeRawPointer.init(bitPattern: "ass_cache".hashValue)
+        static let cellReuseIds = UnsafeRawPointer.init(bitPattern: "ass_cellReuseIds".hashValue)
     }
     
     // 高度缓存
     var keyedHeigthCache: IndexPathHeightCache? {
         set {
-            objc_setAssociatedObject(self, &AssociatedKeys.cache, newValue, objc_AssociationPolicy.OBJC_ASSOCIATION_COPY_NONATOMIC)
+            objc_setAssociatedObject(self, AssociatedKeys.cache!, newValue, objc_AssociationPolicy.OBJC_ASSOCIATION_COPY_NONATOMIC)
         }
         get {
-            var cache = objc_getAssociatedObject(self, &AssociatedKeys.cache) as? IndexPathHeightCache
+            var cache = objc_getAssociatedObject(self, AssociatedKeys.cache!) as? IndexPathHeightCache
             if cache == nil {
                 cache = IndexPathHeightCache.init()
-                objc_setAssociatedObject(self, &AssociatedKeys.cache, cache, objc_AssociationPolicy.OBJC_ASSOCIATION_COPY_NONATOMIC)
+                objc_setAssociatedObject(self, AssociatedKeys.cache!, cache, objc_AssociationPolicy.OBJC_ASSOCIATION_COPY_NONATOMIC)
             }
             return cache
         }
     }
     
     // 布局Cell缓存
-    private var tmpCellForReuseIds: [String: UITableViewCell]? {
+    var tmpCellForReuseIds: [String: UITableViewCell]? {
         set {
-            objc_setAssociatedObject(self, &AssociatedKeys.cellReuseIds, newValue, objc_AssociationPolicy.OBJC_ASSOCIATION_COPY_NONATOMIC)
+            objc_setAssociatedObject(self, AssociatedKeys.cellReuseIds!, newValue, objc_AssociationPolicy.OBJC_ASSOCIATION_COPY_NONATOMIC)
         }
         get {
-            return objc_getAssociatedObject(self, &AssociatedKeys.cellReuseIds) as? [String: UITableViewCell]
+            return objc_getAssociatedObject(self, AssociatedKeys.cellReuseIds!) as? [String: UITableViewCell]
         }
     }
 }
